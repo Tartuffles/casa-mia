@@ -1,0 +1,553 @@
+/* 1. IMPORTATION DES POLICES */
+/* ============================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap');
+
+p {
+    font-size: 20px; /* Ajuste la taille de la police */
+    font-weight: bold; /* Met le texte en gras */
+}
+
+#CASA9 img {
+    position: relative;
+    transform: translate(0px, -400px); /* Déplace de 0px a gauche et 0px vers le bas */
+    width: 35%;
+}
+
+@media ( max-width: 768px) {
+    #CASA9 img {
+        width: 65%;
+    }    
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Empile les éléments du header en colonne */
+        align-items: center; /* Centre les éléments horizontalement */
+        padding: 0; /* Supprime tout le padding autour du header */
+        height: auto; /* Ajuste la hauteur du header automatiquement */
+        transform: translate(0px, -80px);
+    }
+
+    nav ul {
+        flex-direction: column; /* Empile les liens de navigation en colonne */
+        gap: 1; /* Supprime l'espace entre les éléments */
+        padding: 0; /* Supprime tout le padding interne */
+        margin: -1; /* Supprime toute marge autour de la liste */
+        text-align: center; /* Centre le texte des liens */
+    }
+
+    nav ul li {
+        margin: -1; /* Supprime la marge autour des éléments de la liste */
+    }
+
+    body {
+        padding-top: 80px; /* Espace en haut pour éviter que le titre soit caché sous le header */
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+
+    form input, form textarea, form button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.6em;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+    }
+}
+
+
+/* ============================= */
+/* 2. STYLE GLOBAL */
+/* ============================= */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f8f5f0;
+    color: #333;
+    text-align: center;
+    font-size: 18px;
+    overflow: auto; /* Permettre le scroll */
+}
+
+/* Titres */
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 2rem; }
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #8b0000;
+    margin-bottom: 40px;
+}
+
+/* Conteneur principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ============================= */
+/* 3. NAVIGATION */
+/* ============================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8b0000;
+    padding: 5px;
+    position: top;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* ============================= */
+/* 4. SECTIONS */
+/* ============================= */
+section {
+    padding-top: 50px;
+}
+
+/* Accueil */
+#home {
+    background: url('hero.jpg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* Organisation des sections */
+.section-content {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+/* ============================= */
+/* 5. CONTENU DE LOCALISATION  */
+/* ============================= */
+.content-location {
+    position: relative; /* Définit la position relative pour pouvoir le déplacer par rapport à sa position d'origine */
+    bottom: -350px; /* Décale le contenu de 350px vers le bas */
+    left: 0px; /* Décale le contenu de 0px depuis la gauche */
+    margin-left: 100px; /* Ajoute une marge de 100px à gauche pour ajuster la position du contenu */
+    max-width: 100%; /* Assure que le contenu ne dépasse pas la largeur de son conteneur */
+    overflow: hidden; /* Masque tout contenu qui dépasse du conteneur */
+    position: relative; /* Redéfinit la position de l'élément pour permettre de le déplacer précisément */
+}
+
+/* ============================= */
+/* 6. BOUTON RETROUVEZ NOUS  */
+/* ============================= */
+#routeBtn {
+    display: inline-block; /* Affiche le bouton comme un élément en ligne avec des propriétés de bloc */
+    padding: 15px 25px; /* Ajoute de l'espace intérieur (15px haut et bas, 25px gauche et droite) */
+    background-color: #8b0000; /* Couleur de fond rouge */
+    color: white; /* Définit la couleur du texte en blanc */
+    text-align: center; /* Centre le texte à l'intérieur du bouton */
+    text-decoration: none; /* Enlève le soulignement si le bouton est un lien */
+    font-size: 18px; /* Définit la taille du texte à 18px */
+    font-weight: bold; /* Met le texte en gras pour le rendre plus visible */
+    border-radius: 5px; /* Arrondit les coins du bouton avec un rayon de 5px */
+    transition: background-color 0.3s ease; /* Ajoute un effet de transition de la couleur de fond sur 0.3 seconde */
+    margin: 0 auto; /* Centre le bouton horizontalement */
+    margin-left: 0px; /* Ajoute une marge de 300px à gauche pour décaler le bouton */
+    position: relative; /* Permet l'utilisation de z-index pour positionner le bouton au-dessus des autres éléments */
+    z-index: 100; /* Assure que le bouton reste au-dessus des autres éléments sur la page */
+}
+
+/* ============================= */
+/* 7. SECTION ABOUT */
+/* ============================= */
+.content-wrapper {
+    transform: translate(150px);
+    display: flex; /* Utilise le modèle Flexbox pour organiser les éléments à l'intérieur de .content-wrapper */
+    justify-content: space-between; /* Aligne les éléments horizontalement avec de l'espace entre eux */
+    align-items: flex-start; /* Aligne les éléments enfants vers le haut (verticalement) */
+    padding: 20px; /* Ajoute 20px d'espace autour du contenu à l'intérieur de .content-wrapper */
+    width: 100%; /* Définit la largeur de .content-wrapper à 100% du conteneur parent */
+    max-width: 750px; /* Définit la largeur maximale de .content-wrapper à 1200px */
+    margin: 0 auto; /* Centre le conteneur horizontalement */
+    padding-top: 40px;
+}
+
+/* Section #about */
+#about {
+    width: 60%; /* Augmente la largeur à 60% pour une meilleure répartition avec la deuxième section */
+    background-color: #f9f9f9; /* Définit la couleur de fond de #about à une couleur grise très claire */
+    padding: 20px; /* Ajoute un padding de 20px autour du contenu à l'intérieur de #about */
+    border-radius: 10px; /* Arrondit les coins de #about avec un rayon de 10px */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Ajoute une ombre subtile au #about, avec un léger flou */
+    margin-right: 20px; /* Ajoute de l'espace à droite de #about */
+}
+
+/* Sélectionne le deuxième enfant de .content-wrapper (la deuxième section) */
+.content-wrapper section:nth-child(2) {
+    width: 30%; /* Définit la largeur de ce deuxième enfant à 30% de la largeur de son conteneur parent */
+    text-align: center; /* Centre le texte à l'intérieur de ce deuxième enfant */
+    background-color: #fff; /* Définit la couleur de fond de ce deuxième enfant à blanc */
+    padding: 20px; /* Ajoute un padding de 20px autour du contenu dans ce deuxième enfant */
+    border-radius: 10px; /* Arrondit les coins de ce deuxième enfant avec un rayon de 10px */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Ajoute une ombre subtile au deuxième enfant, avec un léger flou */
+}
+
+/* Améliore l'affichage sur les petits écrans */
+@media (max-width: 768px) {
+    .content-wrapper {
+        transform: translate(-0px);
+        flex-direction: column; /* Empile les sections verticalement sur les petits écrans */
+        width: 90%; /* Réduit la largeur de .content-wrapper à 90% sur les petits écrans */
+    }
+
+    #about {
+        width: 100%; /* Étend #about à toute la largeur disponible sur les petits écrans */
+        margin-right: 0; /* Supprime la marge à droite */
+    }
+
+    .content-wrapper section:nth-child(2) {
+        width: 100%; /* Étend la deuxième section à toute la largeur disponible sur les petits écrans */
+    }
+}
+
+/* ============================= */
+/* 11. GALERIE - CARROUSEL */
+/* Section Galerie */
+#gallery {
+    margin: 0; /* Retire les marges */
+    padding-top: 20px; /* Ajoute un léger padding en haut */
+}
+
+/* Conteneur de la galerie */
+.gallery-container {
+    display: flex; /* Utilise Flexbox pour aligner les éléments horizontalement */
+    align-items: center; /* Centre verticalement les éléments */
+    justify-content: center; /* Centre les éléments horizontalement */
+    gap: 10px; /* Espace de 10px entre chaque image */
+    overflow: hidden; /* Masque les images qui dépassent le conteneur */
+    width: 100%; /* Utilise 100% de la largeur disponible */
+    max-width: 2500px; /* Limite la largeur maximale */
+    margin: 0 auto; /* Centre le conteneur horizontalement */
+}
+
+/* Wrapper des images */
+.gallery-wrapper {
+    overflow: hidden; /* Masque le contenu qui dépasse */
+    width: 100%; /* La largeur du wrapper s’adapte à 100% */
+    max-width: 925px; /* Largeur maximale du wrapper */
+    border-radius: 10px; /* Coins arrondis */
+    position: relative; /* Permet de positionner les boutons à l'intérieur */
+}
+
+/* Conteneur des images */
+.gallery-images {
+    display: flex; /* Affiche les images en ligne */
+    flex-wrap: nowrap; /* Empêche les images de passer à la ligne suivante */
+    transition: transform 0.5s ease-in-out; /* Animation de défilement fluide */
+    width: calc(300px * 4 + 10px * 3); /* 4 images de 300px avec 10px d'espace entre elles */
+}
+
+/* Style des images */
+.gallery-images img {
+    width: 300px; /* Largeur de chaque image */
+    height: 250px; /* Hauteur de chaque image */
+    flex-shrink: 0; /* Empêche les images de se rétrécir */
+    margin: 0 5px; /* Espacement entre chaque image */
+    object-fit: cover;
+}
+
+/* Style des boutons de navigation */
+#prevBtn, #nextBtn {
+    background: #8b0000; /* Couleur de fond rouge pour les boutons */
+    color: white; /* Texte blanc */
+    border: none; /* Supprime les bordures par défaut */
+    padding: 10px; /* Ajoute de l’espace autour du texte du bouton */
+    cursor: pointer; /* Affiche un curseur de main lors du survol */
+    font-size: 1.5rem; /* Taille de la police */
+    border-radius: 5px; /* Coins arrondis */
+    margin: 0 5px; /* Réduit l'espace de chaque côté des boutons */
+    z-index: 10; /* Assure que les boutons sont toujours visibles au-dessus des images */
+}
+
+/* Effet de survol pour les boutons */
+#prevBtn:hover, #nextBtn:hover {
+    background: #5a0000; /* Couleur de fond plus foncée lors du survol */
+}
+
+/* ============================= */
+/* 13. SECTION MENU */
+/* ============================= */
+@media (max-width: 768px) {
+    #content-menu img {
+        width: 350px;
+        height: 250px;
+    }
+}
+
+
+/* ============================= */
+/* 14. SECTION MENU2 */
+/* ============================= */
+/* Style général pour la section Menu */
+#menu2 {
+    text-align: center; /* Centrer le texte et l'image */
+    padding: 20px; /* Espacement autour du contenu */
+}
+
+/* Style pour l'image */
+#menu2 img {
+    width: 100%; /* L'image prend toute la largeur disponible */
+    height: auto; /* Garde les proportions de l'image */
+    max-width: 500px; /* Limite la largeur maximale de l'image */
+    margin-top: 20px; /* Ajoute un espacement au-dessus de l'image */
+}
+
+/* Media Query pour les petits écrans */
+@media (max-width: 768px) {
+    #menu2 h2 {
+        font-size: 1.5rem; /* Taille de police ajustée pour mobile */
+    }
+
+    #menu2 img {
+        width: 100%; /* L'image prend 90% de la largeur sur mobile */
+        height: auto; /* La hauteur de l'image s'adapte automatiquement */
+    }
+}
+
+
+/* ============================= */
+/* 14. SECTION SERVICES */
+/* ============================= */
+/* Styles pour la section services */
+#services {
+    width: 40%; /* Largeur de la section */
+    background-color: #f9f9f9; /* Couleur de fond */
+    padding: 20px; /* Espacement interne */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Ombre portée */
+    margin: 0 auto; /* Centre horizontalement */
+}
+
+/* Media query pour les petits écrans */
+@media (max-width: 768px) {
+    #services {
+        width: 90%; /* Ajuste la largeur sur les petits écrans */
+        margin: 20px auto; /* Ajoute un peu d'espace autour de la section */
+    }    
+}
+
+/* ============================= */
+/* 9. BOUTON SCROLL TO TOP */
+/* ============================= */
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #8b0000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+#scrollToTop:hover {
+    background: #5a0000;
+}
+
+@media (max-width: 768px) {
+    #scrollToTop {
+        transform: translate(0px);
+    }
+}
+
+/* ============================= */
+/* 10. FOOTER AVEC MARGE ROUGE */
+/* ============================= */
+footer {
+    background-color: #8b0000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* ============================= */
+/* 12. IMAGE DE FOND */
+/* ============================= */
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Évite les décalages horizontaux */
+}
+
+body {
+    background-image: url('logo.jpg'); /* Vérifie que le chemin est correct */
+    background-size: 100% 100%; /* Ajuste l’image pour couvrir toute la largeur et hauteur */
+    background-position: center;
+    background-attachment: fixed; /* Fixe l’image */
+}
+
+/* Conteneur de l'en-tête */
+.header-container {
+    display: flex;
+    align-items: center;
+    background-color: #8b0000;
+    padding: 10px 20px;
+    justify-content: space-between; /* Espacement entre les éléments à gauche et à droite */
+    position: relative;
+    z-index: 1; /* Permet de garder l'en-tête au-dessus de l'image de fond */
+}
+
+/* Image à gauche dans l'en-tête */
+.left-image img {
+    width: 60px; /* Ajuste la largeur de l'image */
+    height: auto;
+    margin-right: 20px;
+}
+
+/* Logo dans l'en-tête */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo à gauche */
+.left-logo {
+    width: 60px;
+    height: auto;
+    margin-right: 15px;
+}
+
+/* Media Query pour les petits écrans */
+@media (max-width: 768px) {
+    body {
+    background-image: none; /* Chemin de ton image */
+    background-size: 100% 25%; /* Ajuste l'image pour couvrir tout l'écran */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition */
+}
+
+    .header-container {
+        flex-direction: column; /* Change la direction des éléments en colonne sur mobile */
+        padding: 15px 10px; /* Ajuste le padding sur mobile */
+    }
+
+    .left-image img, .left-logo {
+        width: 50px; /* Réduit la taille du logo pour mobile */
+        margin-right: 10px; /* Réduit l'espacement */
+    }
+}
+
+/* ============================= */
+/* 13. FORMULAIRE CONTACT */
+/* ============================= */
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+/* Boutons */
+button {
+    background-color: #8b0000;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #5a0000;
+}
+/* ============================= */
+/* 8. LOADER (ANIMATION DE CHARGEMENT) */
+/* ============================= */
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #8b0000;
+    border-top: 5px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
